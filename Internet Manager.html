@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Internet Manager</title>
+<head>
+  <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+</head>
+</head>
+
+<body> 
+	 <body>
+  <!-- کد HTML صفحه شما -->
+  
+  <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+
+
+	  <section id="sec1" >
+	<section id="wb" >  <h1 id="title" >INTERNET MANAGER </h1> </section>
+	
+	<div id="m"  width="50%" >
+	<h4 id="av" > Purchase Date </h4>
+	<input type="date" id="SD" class="d" >
+	</div>
+	
+	
+	<div id="m"  width="50%" >
+	<h4 id="av" >  Expiration Date </h4>
+	<input type="date" id="LD" class="d" >
+    <br/>
+    </div>
+    
+    <div id="hvv" >
+    
+    <h4 id="av2" > Enter the amount of Internet (GB) </h4>
+    <input type="number" id="MB" class="d" >
+    <br/>
+    
+    <h4 id="av2" > Enter the remaining Internet (GB) </h4>
+    <input type="number" id="UMB" class="d" >
+    <br/>
+    <br/>
+	<button onClick="Internet()" class="dm" >SUBMIT</button>	
+	 <br/>	
+	 </div>
+			<h4 id="Answer">  </h4>
+			
+			<h4 class="j1"  id="Answer1">  </h4>
+			
+			<h4 class="j1"  id="Answer2">  </h4>
+</section>
+<section id="sec2" >
+       <div id="t2h">  <button id="th" class="btnth1" onclick="them1()">.</button>  </div>
+       <div id="t2h">  <button id="th" class="btnth2" onclick="them2()">.</button>  </div>
+       <div id="t2h">  <button id="th" class="btnth3" onclick="them3()">.</button>  </div>
+       <div id="t2h">  <button id="th" class="btnth4" onclick="them4()">.</button>  </div>
+</section>
+
+<style type="text/css">
+
+@media(min-width :1200px){
+	#sec1,#sec2{ width: 5em;}
+}
+
+
+
+#sec1{
+background:#1d731e;
+text-align:center;
+border-radius:25px;
+padding:12px;
+background-image:url(http://internetmanager.freehost.io//IMG-20230809-024456.jpg);
+width: 80%;
+	margin:10% ;
+}
+
+#sec2{
+background-color:#1d731e;
+border-radius:20px;
+padding:10px;
+text-align: center ;
+background-position:right;
+background-image:url(http://internetmanager.freehost.io//IMG-20230809-024456.jpg);
+}
+#t2h{
+width:18%;
+position:relative;
+display:inline-block;
+text-align: center ;
+}
+
+
+.btnth1{
+border-radius:25px;
+background-image:url(http://internetmanager.freehost.io//IMG-20230809-024456.jpg);
+padding:10px;
+width:100%;
+height:100%;
+}
+.btnth2{
+border-radius:25px;
+background-image:url(http://internetmanager.freehost.io//images.webp);
+padding:10px;
+width:100%;
+height:100%;
+}
+.btnth3{
+border-radius:25px;
+background-image:url(http://internetmanager.freehost.io//HD-wallpaper-creative-background-green-pattern-whatsapp.jpg);
+padding:10px;
+width:100%;
+height:100%;
+}
+.btnth4{
+border-radius:25px;
+background-image:url(http://internetmanager.freehost.io//o67iakxcon571.jpg);
+padding:10px;
+width:100%;
+height:100%;
+}
+
+
+
+#hvv{
+margin:10px;
+background:#2e3733;
+padding:15px;
+border-radius:20px;
+margin:13px;
+}
+#m{
+width:45%;
+display:inline-block;
+position:relative;
+margin:10px;
+background:#2e3733;
+padding:15px;
+border-radius:20px;
+}
+
+body {
+background:#2e3833;
+}
+#av {
+color: white ;
+Margin:12px;
+Padding:12px;
+}
+#av2{
+color: white ;
+Padding :5px;
+margin:20px;
+}
+
+.d{
+border-radius:20px;
+width:80%;
+text-align: center ;
+padding:2.5px;
+}
+.dm{
+
+padding:10px;
+border-radius:10px;
+}
+#title{
+color: #2e3833 ;
+Margin:15px;
+} 
+#wb{
+background: white ;
+margin:10px;
+padding:1px;
+border-radius:20px;
+}
+
+.j1 {
+color: white ;
+
+
+
+}
+</style>
+</body>
+<script type="text/javascript">
+	
+	var Ans =document.getElementById("Answer");
+	var Ans1 =document.getElementById("Answer1");
+	var Ans2 =document.getElementById("Answer2");
+     
+     
+      function them1(){
+    
+    document.getElementById("a").style.backgroundimage=url("http://internetmanager.freehost.io//IMG-20230809-024456.jpg");
+    }
+	function them2(){
+    
+    document.getElementById("a").style.backgroundimage=url("http://internetmanager.freehost.io//images.webp");
+    }
+	function them3(){
+    
+    document.getElementById("a").style.backgroundimage=url("http://internetmanager.freehost.io//HD-wallpaper-creative-background-green-pattern-whatsapp");
+    }
+	function them4(){
+    
+    document.getElementById("a").style.backgroundimage=url("http://internetmanager.freehost.io//o67iakxcon571.jpg");
+    }
+     
+     
+	function Valid (){
+
+		const StartD  = document.getElementById("SD").value;
+		const LastD  = document.getElementById("LD").value;
+		const MB = Number(document.getElementById("MB").value);
+		const UMB = Number(document.getElementById("UMB").value);
+		const D1 = new Date(StartD).getTime();
+		const D2 = new Date(LastD).getTime();
+		const D3 = new Date().getTime();
+
+		if (D1 > D3) {
+			window.alert("the purchase date cannat be after the Todays date");
+			return false;
+		}
+
+		if(D1 > D2 ) {
+			window.alert("the purchase date cannat be after the expiration date");
+			return false;
+		}
+
+		if ( MB < UMB) {
+			window.alert("The amount of intenet used cannot be more than the purchased amount");
+			return false;
+		}
+
+		if(StartD == "" || StartD == null ){
+			window.alert(" you have to Enter the Internet package purchase date");
+			return false;
+		}
+
+		if(LastD == "" || LastD == null ){
+			window.alert("you have to Enter the Internet package expiration date ");
+			return false;
+		}
+
+		if(MB == "" || MB == null ){
+			window.alert("you have to Enter the amount of Internet volume purchased");
+			return false;
+		}
+
+		if(UMB == "" || UMB == null ){
+			window.alert("you have to  Enter the remaining Internet volume");
+			return false;
+		}
+			
+	}
+
+
+	function Dif() {
+		
+		const StartD  = document.getElementById("SD").value;
+		const LastD  = document.getElementById("LD").value;
+		
+
+		const D1 = new Date(StartD).getTime();
+		const D2 = new Date(LastD).getTime();
+		
+		const Time =Math.abs(D1-D2);  
+		
+		const days = Time/(1000*60*60*24);
+		
+		return days;
+		}
+	
+	function Avg() {
+		
+		let MB = Number(document.getElementById("MB").value);
+		let NUPD = MB/Dif();
+		return NUPD.toFixed(2); 
+	}
+	
+	
+		function PDDiff() {
+		
+		const StartD  = document.getElementById("SD").value;
+		const D1 = new Date(StartD).getTime();
+		const D2 = new Date().getTime();
+		
+		const Time =Math.abs(D1-D2);  
+		
+		const days =Math.floor(Time/86400000);
+		
+		return days;
+		}
+	
+	
+	function UAvg() {
+		const MB = Number(document.getElementById("MB").value);
+		const AMB = Number(document.getElementById("UMB").value);
+		const UMB = MB - AMB;
+		let NUPD = UMB/PDDiff();
+		return NUPD.toFixed(2); 
+	}
+		
+	
+	function Internet() {
+
+		Valid();
+		
+		const MB = Number(document.getElementById("MB").value);
+		const AMB = Number(document.getElementById("UMB").value);
+		const UMB = MB - AMB;
+		const Nuse = Avg() * PDDiff();
+		var Used = UMB - Nuse;
+			
+	  		
+		
+			if(Used > 0 ){
+				Ans.style.color = "red";
+				Ans.innerHTML ="Your consumption volume is more than the normal average"
+				Ans1.innerHTML="you have used " + Used.toFixed(2) + "GB more than usual" 	
+				Ans2.innerHTML =" you have to use daily " + Avg() + "GB and your daily AVG is " + UAvg() +"GB";
+			}
+		
+			else if( Used < 0 ){
+				Ans.style.color = "blue"
+			const GU = Math.abs(Used);
+				Ans.innerHTML ="Your consumption volume is less than the normal average"
+				Ans1.innerHTML="You have to use " + GU.toFixed(2) + "GB to reach the normal value"
+				Ans2.innerHTML =" you have to use daily " + Avg() + "GB and your daily AVG is " + UAvg() +"GB";
+			}
+			
+			else if ( Used == 0 ) {
+				Ans.style.color = "green"
+				Ans.innerHTML ="Cangratulation!"
+				Ans1.innerHTML ="Your consumption volume is equal to your normal average"
+				Ans2.innerHTML =" you have to use daily " + Avg() + "GB and your daily AVG is " + UAvg() +"GB";
+			}
+			
+		
+	}
+	      
+	
+
+	</script>
+</html>
