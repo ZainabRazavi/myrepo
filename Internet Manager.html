@@ -220,36 +220,44 @@ color: white ;
 
 		if (D1 > D3) {
 			window.alert("the purchase date cannat be after the Todays date");
+			
+			window.alert("تاریخ خرید نمی تواند بعد از تاریخ امروز باشد");
 			return false;
 		}
 
 		if(D1 > D2 ) {
 			window.alert("the purchase date cannat be after the expiration date");
+				window.alert("تاریخ خرید نمی تواند بعد از تاریخ انقضا باشد");
 			return false;
 		}
 
 		if ( MB < UMB) {
 			window.alert("The amount of intenet used cannot be more than the purchased amount");
+			window.alert("مقدار intenet استفاده شده نمی تواند بیشتر از مقدار خریداری شده باشد");
 			return false;
 		}
 
 		if(StartD == "" || StartD == null ){
 			window.alert(" you have to Enter the Internet package purchase date");
+			window.alert(" باید تاریخ خرید بسته اینترنتی را وارد کنید");
 			return false;
 		}
 
 		if(LastD == "" || LastD == null ){
 			window.alert("you have to Enter the Internet package expiration date ");
+			window.alert("باید تاریخ انقضای بسته اینترنت را وارد کنید");
 			return false;
 		}
 
 		if(MB == "" || MB == null ){
 			window.alert("you have to Enter the amount of Internet volume purchased");
+			window.alert("باید مقدار حجم اینترنت خریداری شده را وارد کنید");
 			return false;
 		}
 
 		if(UMB == "" || UMB == null ){
 			window.alert("you have to  Enter the remaining Internet volume");
+			window.alert("لطفا باقیمانده اینترنت را وارد کنید");
 			return false;
 		}
 			
